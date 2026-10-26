@@ -22,7 +22,7 @@ class Joueur
 {
     public int Vie = 100;
     public int Potions = 3;
-    public int Attaque = 20;
+    public int Attaque = 40;
     public void Soigner()
     {
         if (Potions > 0)
@@ -118,7 +118,7 @@ class Scenario
             // Combat contre le monstre
             if (idPage == 3)
             {
-                Ennemi monstre = new Ennemi("Monstre", 40, 10);
+                Ennemi monstre = new Ennemi("Monstre", 100, 10);
                 int resultat = Combattre(monstre);
                 if (resultat == 0)
                     break;
@@ -147,7 +147,7 @@ class Scenario
             // Combat contre le dragon
             if (idPage == 6)
             {
-                Ennemi dragon = new Ennemi("Dragon", 200, 40);
+                Ennemi dragon = new Ennemi("Dragon", 200, 20);
                 int resultat = Combattre(dragon);
                 if (resultat == 0)
                     break;
